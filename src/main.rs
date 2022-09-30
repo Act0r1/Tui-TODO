@@ -1,13 +1,9 @@
-extern crate termion;
-mod db;
-mod error;
-use chrono::{DateTime, Duration, Utc};
 use crossterm::{
     event::{self, DisableMouseCapture, Event, KeyCode},
     execute,
     terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen},
 };
-use std::{error::Error, fs::OpenOptions, io};
+use std::{error::Error,io};
 use tui::{
     backend::{Backend, CrosstermBackend},
     layout::{Constraint, Direction, Layout},
